@@ -8,12 +8,15 @@ Following keybindings are supported:
 
 Key                       | Description
 ------------------------- | -------------------------
+`Ctrl+W`                  | Delete next character
+`Ctrl+W`                  | Backspace
 `Ctrl+W`                  | Cut selected text
 `Alt+W`                   | Copy selected text 
 `Ctrl+Y`                  | Past select text
 `Ctrl+X H`                | Select all
 `Ctrl+K`                  | Cut current line
 `Ctrl+O`                  | Insert a line after 
+`Ctrl+Alt+O`              | Insert a line before 
 `Ctrl+X U`                | Undo
 `Ctrl+G`                  | Cancel current selection
 
@@ -29,7 +32,9 @@ Key                       | Description
 `Alt+V`                   | Scroll up
 `Ctrl+N`                  | Scroll down one line
 `Ctrl+P`                  | Scroll up one line
-`F2`                      | Goto line
+`Shift+Alt+,`             | Go to buffer beginning
+`Shift+Alt+,`             | Go to buffer end
+`Alt+G G`                 | Goto line
 `Ctrl+S`                  | Search Text
 
 ### Buffers management
@@ -38,11 +43,18 @@ Key                       | Description
 ------------------------- | -------------------------
 `Ctrl+X K`                | Kill current buffer
 `Ctrl+X B`                | Switch to other buffer
+`Ctrl+X Ctrl+F`           | Open file
 `Ctrl+X Ctrl+S`           | Save file
+`Ctrl+X S`                | Save all files
 `Ctrl+X 3`                | Split window vertically
 `Ctrl+X O`                | Move focus to other buffer
 `Ctrl+X Ctrl+C`           | Exit
 
+### Mischellaneous
+
+Key                       | Description
+------------------------- | -------------------------
+`Ctrl+Alt+\`             | Indent region
 
 ## License
 
