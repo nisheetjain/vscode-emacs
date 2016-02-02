@@ -19,6 +19,8 @@ Key                       | Description
 `Ctrl+Alt+O`              | Insert a line before 
 `Ctrl+X U`                | Undo
 `Ctrl+G`                  | Cancel current selection
+`Ctrl+Space`              | Enter mark mode
+`Ctrl+G`                  | Exit mark mode
 
 ### Cursor movement
 

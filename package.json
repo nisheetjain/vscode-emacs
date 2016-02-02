@@ -17,6 +17,10 @@
     "categories": [
         "Other"
     ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/emacs",
     "contributes": {
         "keybindings": [
             {
@@ -70,43 +74,83 @@
                 "when": "editorTextFocus && editorHasSelection"
             },
             {
+                "key": "Ctrl+Space",
+                "command": "emacs.enterMarkMode",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Ctrl+G",
+                "command": "emacs.exitMarkMode",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "up",
+                "command": "emacs.cursorUp",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "down",
+                "command": "emacs.cursorDown",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "left",
+                "command": "emacs.cursorLeft",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "right",
+                "command": "emacs.cursorRight",
+                "when": "editorTextFocus"
+            },
+            {
                 "key": "Ctrl+A",
-                "command": "cursorHome",
+                "command": "emacs.cursorHome",
                 "when": "editorTextFocus"
             },
             {
                 "key": "Ctrl+E",
-                "command": "cursorEnd",
+                "command": "emacs.cursorEnd",
                 "when": "editorTextFocus"
             },
             {
                 "key": "Alt+B",
-                "command": "cursorWordLeft",
+                "command": "emacs.cursorWordLeft",
                 "when": "editorTextFocus"
             },
             {
                 "key": "Alt+F",
-                "command": "cursorWordRight",
+                "command": "emacs.cursorWordRight",
                 "when": "editorTextFocus"
             },
             {
                 "key": "Ctrl+V",
-                "command": "scrollPageDown",
+                "command": "emacs.scrollPageDown",
                 "when": "editorTextFocus"
             },
             {
                 "key": "Alt+V",
-                "command": "scrollPageUp",
+                "command": "emacs.scrollPageUp",
                 "when": "editorTextFocus"
             },
             {
                 "key": "Ctrl+N",
-                "command": "scrollLineDown",
+                "command": "emacs.scrollLineDown",
                 "when": "editorTextFocus"
             },
             {
                 "key": "Ctrl+P",
-                "command": "scrollLineUp",
+                "command": "emacs.scrollLineUp",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Alt+Shift+,",
+                "command": "emacs.cursorTop",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Alt+Shift+.",
+                "command": "emacs.cursorBottom",
                 "when": "editorTextFocus"
             },
             {
@@ -155,20 +199,18 @@
                 "command": "deleteRight"
             },
             {
-                "key": "Alt+Shift+,",
-                "command": "cursorTop",
-                "when": "editorTextFocus"
-            },
-            {
-                "key": "Alt+Shift+.",
-                "command": "cursorBottom",
-                "when": "editorTextFocus"
-            },
-            {
                 "key": "Ctrl+Alt+\\",
                 "command": "editor.action.format",
                 "when": "editorTextFocus"
             }
         ]
-    }
+    },
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+	},
+	"devDependencies": {
+		"typescript": "^1.6.2",
+		"vscode": "0.10.x"
+	}
 }
