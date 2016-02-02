@@ -37,7 +37,8 @@ Key                       | Description
 `Shift+Alt+,`             | Go to buffer beginning
 `Shift+Alt+,`             | Go to buffer end
 `Alt+G G`                 | Goto line
-`Ctrl+S`                  | Search Text
+`Ctrl+S`                  | Incremental search forward
+`Ctrl+R`                  | Incremental search backward
 
 ### Buffers management
 
@@ -59,6 +60,7 @@ Key                       | Description
 `Ctrl+Alt+\`              | Indent region
 `Ctrl+C Ctrl+C`           | Comment current line or selected region
 `Ctrl+C Ctrl+U`           | Uncomment current line or selected region
+`Alt+X`                   | Execute command
 
 ## License
 
