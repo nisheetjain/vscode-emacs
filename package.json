@@ -1,0 +1,142 @@
+{
+    "name": "emacs",
+    "displayName": "Emacs",
+    "description": "Basic Emacs keybindings for VS Code",
+    "version": "0.0.1",
+    "publisher": "nisheetjain",
+    "icon": "https://www.gnu.org/graphics/heckert_gnu.small.png",                                                                                                                                                                                   
+    "repository": {                                                                                                                                                                                              
+        "type": "git",                                                                                                                                                                                           
+        "url": "https://github.com/nisheetjain/vscode-emacs"                                                                                                                                                     
+    },                                                                                                                                                                                                           
+    "bugs": "https://github.com/nisheetjain/vscode-emacs/issues",                                                                                                                                                
+    "license": "SEE LICENSE IN LICENSE.txt",
+    "engines": {
+        "vscode": "^0.10.1"
+    },
+    "categories": [
+        "Other"
+    ],
+    "contributes": {
+        "keybindings": [
+            {
+                "key": "Ctrl+W",
+                "command": "editor.action.clipboardCutAction",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Alt+W",
+                "command": "editor.action.clipboardCopyAction",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Ctrl+Y",
+                "command": "editor.action.clipboardPasteAction",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Ctrl+X H",
+                "command": "editor.action.selectAll",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Ctrl+K",
+                "command": "editor.action.deleteLines",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Ctrl+O",
+                "command": "editor.action.insertLineAfter",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Ctrl+X U",
+                "command": "undo",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Ctrl+G",
+                "command": "closeReferenceSearchEditor",
+                "when": "searchViewletVisible"
+            },
+            {
+                "key": "Ctrl+G",
+                "command": "cancelSelection",
+                "when": "editorTextFocus && editorHasSelection"
+            },
+            {
+                "key": "Ctrl+A",
+                "command": "cursorHome",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Ctrl+E",
+                "command": "cursorEnd",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Alt+B",
+                "command": "cursorWordLeft",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Alt+F",
+                "command": "cursorWordRight",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Ctrl+V",
+                "command": "scrollPageDown",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Alt+V",
+                "command": "scrollPageUp",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Ctrl+N",
+                "command": "scrollLineDown",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Ctrl+P",
+                "command": "scrollLineUp",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "F2",
+                "command": "workbench.action.gotoLine"
+            },
+            {
+                "key": "Ctrl+S",
+                "command": "actions.find"
+            },
+            {
+                "key": "Ctrl+X K",
+                "command": "workbench.action.closeActiveEditor",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Ctrl+X B",
+                "command": "workbench.action.openPreviousEditor"
+            },
+            {
+                "key": "Ctrl+X Ctrl+S",
+                "command": "workbench.action.files.save"
+            },
+            {
+                "key": "Ctrl+X Ctrl+C",
+                "command": "workbench.action.closeWindow"
+            },
+            {
+                "key": "Ctrl+X 3",
+                "command": "workbench.action.splitEditor"
+            },
+            {
+                "key": "Ctrl+X O",
+                "command": "workbench.action.cycleEditor"
+            }
+        ]
+    }
+}
