@@ -56,7 +56,9 @@ Key                       | Description
 
 Key                       | Description
 ------------------------- | -------------------------
-`Ctrl+Alt+\`             | Indent region
+`Ctrl+Alt+\`              | Indent region
+`Ctrl+C Ctrl+C`           | Comment current line or selected region
+`Ctrl+C Ctrl+U`           | Uncomment current line or selected region
 
 ## License
 

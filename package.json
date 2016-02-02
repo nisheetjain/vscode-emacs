@@ -2,7 +2,7 @@
     "name": "emacs",
     "displayName": "Emacs",
     "description": "Basic Emacs keybindings for VS Code",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "publisher": "nisheetjain",
     "icon": "emacs.png",
     "repository": {
@@ -201,6 +201,16 @@
             {
                 "key": "Ctrl+Alt+\\",
                 "command": "editor.action.format",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Ctrl+C Ctrl+C",
+                "command": "editor.action.addCommentLine",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "Ctrl+C Ctrl+U",
+                "command": "editor.action.removeCommentLine",
                 "when": "editorTextFocus"
             }
         ]
