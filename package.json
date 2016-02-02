@@ -2,7 +2,7 @@
     "name": "emacs",
     "displayName": "Emacs",
     "description": "Basic Emacs keybindings for VS Code",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "publisher": "nisheetjain",
     "icon": "emacs.png",
     "repository": {
@@ -30,7 +30,7 @@
             },
             {
                 "key": "Alt+W",
-                "command": "editor.action.clipboardCopyAction",
+                "command": "emacs.editor.action.clipboardCopyAction",
                 "when": "editorTextFocus"
             },
             {

@@ -14,6 +14,16 @@ export function activate(context: vscode.ExtensionContext): void {
         removeSelection();
         inMarkMode = false;
     }));
+
+    context.subscriptions.push(vscode.commands.registerCommand('emacs.editor.action.clipboardCopyAction', (context) => {
+        return vscode.commands.executeCommand("editor.action.clipboardCopyAction")
+            .then(() => {
+                if (inMarkMode) {
+                    removeSelection()
+                    inMarkMode = false;
+                }
+            });
+    }));
     
     var supportedCursorMoves: string[] = ["cursorUp", "cursorDown", "cursorLeft", "cursorRight",
         "cursorHome", "cursorEnd",

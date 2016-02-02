@@ -8,11 +8,11 @@ Following keybindings are supported:
 
 Key                       | Description
 ------------------------- | -------------------------
-`Ctrl+W`                  | Delete next character
-`Ctrl+W`                  | Backspace
+`Ctrl+D`                  | Delete next character
+`backspace`               | Backspace
 `Ctrl+W`                  | Cut selected text
 `Alt+W`                   | Copy selected text 
-`Ctrl+Y`                  | Past select text
+`Ctrl+Y`                  | Paste select text
 `Ctrl+X H`                | Select all
 `Ctrl+K`                  | Cut current line
 `Ctrl+O`                  | Insert a line after 
