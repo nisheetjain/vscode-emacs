@@ -86,12 +86,12 @@
             {
                 "key": "up",
                 "command": "emacs.cursorUp",
-                "when": "editorTextFocus"
+                "when": "editorTextFocus && !suggestWidgetVisible"
             },
             {
                 "key": "down",
                 "command": "emacs.cursorDown",
-                "when": "editorTextFocus"
+                "when": "editorTextFocus && !suggestWidgetVisible"
             },
             {
                 "key": "left",
