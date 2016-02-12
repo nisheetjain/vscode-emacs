@@ -2,7 +2,7 @@
     "name": "emacs",
     "displayName": "Emacs",
     "description": "Basic Emacs keybindings for VS Code",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "publisher": "nisheetjain",
     "icon": "emacs.png",
     "repository": {
@@ -159,11 +159,11 @@
             },
             {
                 "key": "Ctrl+S",
-                "command": "editor.action.nextMatchFindAction"
+                "command": "emacs.editor.action.nextMatchFindAction"
             },
             {
                 "key": "Ctrl+R",
-                "command": "editor.action.previousMatchFindAction"
+                "command": "emacs.editor.action.previousMatchFindAction"
             },
             {
                 "key": "Ctrl+X K",

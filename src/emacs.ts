@@ -2,6 +2,11 @@ import * as vscode from 'vscode';
 
 var inMarkMode: boolean = false;
 export function activate(context: vscode.ExtensionContext): void {
+    var statusBarItem: vscode.StatusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 3)
+    statusBarItem.text = "Emacs $(beaker)";
+    statusBarItem.tooltip = "Emacs keybindings are active";
+    statusBarItem.show();
+    
     context.subscriptions.push(vscode.commands.registerCommand('emacs.enterMarkMode', (context) => {
         removeSelection();
         inMarkMode = true;
@@ -24,7 +29,15 @@ export function activate(context: vscode.ExtensionContext): void {
                 }
             });
     }));
-    
+
+    context.subscriptions.push(vscode.commands.registerCommand("emacs.editor.action.nextMatchFindAction", (context) => {
+        return  vscode.commands.executeCommand(!context.context.findWidgetVisible? "actions.find": "editor.action.nextMatchFindAction");
+    }));
+
+    context.subscriptions.push(vscode.commands.registerCommand("emacs.editor.action.previousMatchFindAction", (context) => {
+        return  vscode.commands.executeCommand(!context.context.findWidgetVisible? "actions.find": "editor.action.previousMatchFindAction");
+    }));
+
     var supportedCursorMoves: string[] = ["cursorUp", "cursorDown", "cursorLeft", "cursorRight",
         "cursorHome", "cursorEnd",
         "cursorWordLeft", "cursorWordRight",
