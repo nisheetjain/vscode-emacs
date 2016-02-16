@@ -35,7 +35,7 @@ Key                       | Description
 `Ctrl+N`                  | Scroll down one line
 `Ctrl+P`                  | Scroll up one line
 `Shift+Alt+,`             | Go to buffer beginning
-`Shift+Alt+,`             | Go to buffer end
+`Shift+Alt+.`             | Go to buffer end
 `Alt+G G`                 | Goto line
 `Ctrl+S`                  | Incremental search forward
 `Ctrl+R`                  | Incremental search backward
