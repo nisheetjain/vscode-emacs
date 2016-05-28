@@ -19,6 +19,17 @@ export function activate(context: vscode.ExtensionContext): void {
         removeSelection();
         inMarkMode = false;
     }));
+    
+    context.subscriptions.push(vscode.commands.registerCommand('emacs.cutToEndOfLine', (context) => {
+        var editor : vscode.TextEditor = vscode.window.activeTextEditor;
+        var position : vscode.Position = editor.selection.active;
+        var lineLen : number = editor.document.lineAt(position.line).text.length;
+        
+        editor.selection = new vscode.Selection(position, position.with(0, lineLen));
+        
+        return vscode.commands.executeCommand("editor.action.clipboardCutAction")
+    }));
+    
 
     context.subscriptions.push(vscode.commands.registerCommand('emacs.editor.action.clipboardCopyAction', (context) => {
         return vscode.commands.executeCommand("editor.action.clipboardCopyAction")
@@ -45,10 +56,13 @@ export function activate(context: vscode.ExtensionContext): void {
         "scrollLineDown", "scrollLineUp",
         "cursorTop", "cursorBottom"];
         
-     supportedCursorMoves.forEach((cursorMove) => {
-        context.subscriptions.push(vscode.commands.registerCommand("emacs."+cursorMove,
-            (context) => vscode.commands.executeCommand(inMarkMode? cursorMove+"Select": cursorMove)))
-     });
+    supportedCursorMoves.forEach((cursorMove) => {
+        context.subscriptions.push(vscode.commands.registerCommand("emacs." + cursorMove,
+            (context) => {
+                console.log(cursorMove);
+                vscode.commands.executeCommand(inMarkMode ? cursorMove + "Select" : cursorMove);
+            }))
+    });
 }
    
 export function deactivate(context: vscode.ExtensionContext): void {
