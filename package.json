@@ -45,7 +45,7 @@
             },
             {
                 "key": "Ctrl+K",
-                "command": "editor.action.deleteLines",
+                "command": "emacs.cutToEndOfLine",
                 "when": "editorTextFocus"
             },
             {
