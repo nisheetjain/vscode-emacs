@@ -9,7 +9,7 @@ Following keybindings are supported:
 Key                       | Description
 ------------------------- | -------------------------
 `Ctrl+D`                  | Delete next character
-`backspace`               | Backspace
+`Backspace`               | Backspace
 `Ctrl+W`                  | Cut selected text
 `Alt+W`                   | Copy selected text 
 `Ctrl+Y`                  | Paste select text
@@ -28,8 +28,8 @@ Key                       | Description
 ------------------------- | -------------------------
 `Ctrl+A`                  | Move cursor to beginning of line
 `Ctrl+E`                  | Move cursor to end of line
-`Alt+B`                   | Move cursor to next word
-`Alt+F`                   | Move cursor to previous word
+`Alt+B`                   | Move cursor to previous word
+`Alt+F`                   | Move cursor to next word
 `Ctrl+V`                  | Scroll down 
 `Alt+V`                   | Scroll up
 `Ctrl+N`                  | Scroll down one line
@@ -40,7 +40,7 @@ Key                       | Description
 `Ctrl+S`                  | Incremental search forward
 `Ctrl+R`                  | Incremental search backward
 
-### Buffers management
+### Buffer management
 
 Key                       | Description
 ------------------------- | -------------------------
@@ -53,7 +53,7 @@ Key                       | Description
 `Ctrl+X O`                | Move focus to other buffer
 `Ctrl+X Ctrl+C`           | Exit
 
-### Mischellaneous
+### Miscellaneous
 
 Key                       | Description
 ------------------------- | -------------------------
